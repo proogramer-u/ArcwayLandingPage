@@ -18,9 +18,10 @@
                 <a href="#space">The Space</a>
                 <a href="#faq">FAQ</a>
             </div>
-            <a class="nav-cta" href="https://github.com/proogramer-u" target="_blank">Join waitlist</a>
+            <button class="nav-cta" type="button" data-modal-open>Join waitlist</button>
         </nav>
     </header>
+
 
     <main>
         <section class="hero" id="waitlist">
@@ -28,7 +29,7 @@
                 <span class="pill">Opening early 2025 • Surabaya, Indonesia</span>
                 <h1>Arcway is the coworking space built for deep focus and real community.</h1>
                 <p>We are designing a calmer place to work: ergonomic desks, quiet studios, and a curated founder network. Join the waitlist and shape the opening.</p>
-                <a class="nav-cta waitlist-btn" href="https://github.com/proogramer-u" target="_blank">Join waitlist</a>
+                <button class="nav-cta waitlist-btn" type="button" data-modal-open>Join waitlist</button>
             </div>
         </section>
 
@@ -150,6 +151,30 @@
             <a href="#waitlist">Waitlist</a>
         </div>
     </footer>
+
+    <div class="modal-overlay" data-modal>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="waitlist-title">
+            <div class="modal-header">
+                <p class="pill">Join the waitlist</p>
+                <button class="modal-close" type="button" data-modal-close aria-label="Close waitlist form">✕</button>
+            </div>
+            <div class="modal-intro" data-waitlist-intro>
+                <h2 id="waitlist-title">Get early access updates</h2>
+                <p class="modal-subtitle">Leave your name and email. We will reach out as we get closer to launch.</p>
+            </div>
+            <form class="modal-form" data-waitlist-form>
+                <label class="modal-label" for="waitlist-name">Username</label>
+                <input id="waitlist-name" name="name" type="text" placeholder="Your name" required>
+                <label class="modal-label" for="waitlist-email">Email</label>
+                <input id="waitlist-email" name="email" type="email" placeholder="you@email.com" required>
+                <button class="nav-cta modal-submit" type="submit">Request invite</button>
+            </form>
+            <div class="modal-success is-hidden" data-waitlist-success>
+                <h3>You’re on the list!</h3>
+                <p>Thanks for joining. We will reach out with updates as we get closer to opening.</p>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 
